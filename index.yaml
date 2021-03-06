@@ -1,0 +1,19 @@
+apiVersion: v1
+entries:
+  kmptnzbot:
+  - apiVersion: v2
+    appVersion: 0.0.3
+    created: "2021-03-06T02:47:20.980817417Z"
+    dependencies:
+    - condition: postgresql.install
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.11
+    description: A Helm chart for Kubernetes
+    digest: bc81e4b65c602ea3680ca58c17a2a370aac57c722bc82bd7c9652f0f7e110d1b
+    name: kmptnzbot
+    type: application
+    urls:
+    - https://github.com/kmptnz/helm-charts/releases/download/kmptnzbot-0.1.2/kmptnzbot-0.1.2.tgz
+    version: 0.1.2
+generated: "2021-03-06T02:47:20.980833317Z"
