@@ -1,11 +1,11 @@
-# Default values for kmptnzbot.
+# Default values for br0bot.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 
 image:
-  repository: kmptnz/bot
+  repository: br0fessional/bot
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   # tag: "latest"

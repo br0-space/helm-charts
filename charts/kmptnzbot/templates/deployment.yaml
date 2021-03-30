@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "kmptnzbot.fullname" . }}
+  name: {{ include "br0bot.fullname" . }}
   labels:
-    {{- include "kmptnzbot.labels" . | nindent 4 }}
+    {{- include "br0bot.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "kmptnzbot.selectorLabels" . | nindent 6 }}
+      {{- include "br0bot.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "kmptnzbot.selectorLabels" . | nindent 8 }}
+        {{- include "br0bot.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "kmptnzbot.serviceAccountName" . }}
+      serviceAccountName: {{ include "br0bot.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -38,7 +38,7 @@ spec:
               containerPort: 3000
               protocol: TCP
           volumeMounts:
-            - mountPath: /opt/kmptnzbot/config.yml
+            - mountPath: /opt/br0bot/config.yml
               name: config
               subPath: config.yml
               readOnly: true              
@@ -55,7 +55,7 @@ spec:
       volumes:
       - name: config
         configMap:
-          name: {{ template "kmptnzbot.fullname" . }}           
+          name: {{ template "br0bot.fullname" . }}           
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
