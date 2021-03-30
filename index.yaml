@@ -1,5 +1,21 @@
 apiVersion: v1
 entries:
+  br0bot:
+  - apiVersion: v2
+    appVersion: 0.0.7
+    created: "2021-03-30T09:13:25.465118759Z"
+    dependencies:
+    - condition: postgresql.install
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.3.13
+    description: A Helm chart for Kubernetes
+    digest: 59e1fd0c89231deee479f020bd5231c14a1add6f6531fe10fd9d83fb11d4a717
+    name: br0bot
+    type: application
+    urls:
+    - https://github.com/br0fessional/helm-charts/releases/download/br0bot-0.1.7/br0bot-0.1.7.tgz
+    version: 0.1.7
   kmptnzbot:
   - apiVersion: v2
     appVersion: 0.0.6
@@ -76,4 +92,4 @@ entries:
     urls:
     - https://github.com/kmptnz/helm-charts/releases/download/kmptnzbot-0.1.2/kmptnzbot-0.1.2.tgz
     version: 0.1.2
-generated: "2021-03-19T19:59:22.980664073Z"
+generated: "2021-03-30T09:13:25.465158361Z"
