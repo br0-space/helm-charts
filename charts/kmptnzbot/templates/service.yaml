@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "kmptnzbot.fullname" . }}
+  name: {{ include "br0bot.fullname" . }}
   labels:
-    {{- include "kmptnzbot.labels" . | nindent 4 }}
+    {{- include "br0bot.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,4 +12,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "kmptnzbot.selectorLabels" . | nindent 4 }}
+    {{- include "br0bot.selectorLabels" . | nindent 4 }}

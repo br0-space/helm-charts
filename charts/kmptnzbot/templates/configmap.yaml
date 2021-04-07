@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ template "kmptnzbot.fullname" . }}
+  name: {{ template "br0bot.fullname" . }}
   labels:
-    app: {{ template "kmptnzbot.fullname" . }}
+    app: {{ template "br0bot.fullname" . }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
@@ -14,7 +14,7 @@ data:
     database:
       driver: "postgres"
       postgres:
-        host: "{{ include "kmptnzbot.postgresql.fullname" . }}"
+        host: "{{ include "br0bot.postgresql.fullname" . }}"
         port: 5432
         dbName: "{{ .Values.postgresql.postgresqlDatabase }}"
         user: "{{ .Values.postgresql.postgresqlUsername }}"
