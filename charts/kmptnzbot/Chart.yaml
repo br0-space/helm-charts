@@ -6,6 +6,6 @@ version: 0.1.8
 appVersion: "0.0.8"
 dependencies:
   - name: postgresql
-    version: 10.3.13
+    version: 10.4.3
     repository: https://charts.bitnami.com/bitnami
     condition: postgresql.install
