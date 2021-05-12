@@ -2,8 +2,8 @@ apiVersion: v2
 name: br0bot
 description: A Helm chart for Kubernetes
 type: application
-version: 0.1.9
-appVersion: "0.0.9"
+version: 0.2.0
+appVersion: "0.1.0"
 dependencies:
   - name: postgresql
     version: 10.4.3
