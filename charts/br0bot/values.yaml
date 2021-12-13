@@ -96,7 +96,13 @@ bot:
       - trigger: "sync"
         reply: "Der Sync ist stark in diesem! Sync ist damit auf *%d*"
       - trigger: "obegfoin"
-        reply: "Immer ist irgendwas kaputt! Obegfoin ist jetzt auf *%d*"    
+        reply: "Immer ist irgendwas kaputt! Obegfoin ist jetzt auf *%d*" 
+      - trigger: "lel"
+        reply: "Und schon wieder wurde extrem laut gelacht! *Lel* ist jetzt auf *%d*"
+      - trigger: "kartoffel"
+        reply: "Kartoffel? 🤜🤛👊 Pommes! Schon *%d* Kilo zugenommen"
+      - trigger: "vapoctl"
+        reply: "🥦 schon wieder raucht sich einer dicht, schon *%d* mal"   
   telegram:
     apiKey: 123
     webhookurl: chart-example.local
