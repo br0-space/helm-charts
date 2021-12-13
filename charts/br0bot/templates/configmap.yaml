@@ -22,7 +22,6 @@ data:
         ssl: "disable"
         timezone: "UTC"
     telegram:
-      apiKey: "{{ .Values.bot.telegram.apiKey }}"
       baseUrl: "https://api.telegram.org/bot%s/"
       webhookUrl: "{{ .Values.bot.telegram.webhookurl }}"
       endpointSetWebhook: "setWebhook"

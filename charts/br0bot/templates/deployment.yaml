@@ -32,7 +32,13 @@ spec:
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}                                                            
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:          
+          - name: "TELEGRAM_API_KEY"
+            valueFrom:
+              secretKeyRef:
+                key:  bot-token
+                name: {{ .Release.Name }}-token                                                     
           ports:
             - name: http
               containerPort: 3000

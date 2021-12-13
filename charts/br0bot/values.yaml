@@ -104,7 +104,7 @@ bot:
       - trigger: "vapoctl"
         reply: "🥦 schon wieder raucht sich einer dicht, schon *%d* mal"   
   telegram:
-    apiKey: 123
+    token: 123
     webhookurl: chart-example.local
 postgresql:
   postgresqlUsername: kmptnz
