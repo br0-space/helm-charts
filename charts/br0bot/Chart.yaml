@@ -6,6 +6,6 @@ version: 0.2.20
 appVersion: "0.1.10"
 dependencies:
   - name: postgresql
-    version: 11.6.15
+    version: 11.6.18
     repository: https://charts.bitnami.com/bitnami
     condition: postgresql.install
