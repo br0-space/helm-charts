@@ -32,16 +32,20 @@ spec:
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}                                                 
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
               containerPort: 3000
               protocol: TCP
           volumeMounts:
-            - mountPath: /opt/br0bot/config.yml
+            - mountPath: /opt/br0bot/config.yaml
               name: config
-              subPath: config.yml
-              readOnly: true              
+              subPath: config.yaml
+              readOnly: true
+            - mountPath: /opt/br0bot/config/buzzwords.yaml
+              name: buzzwords
+              subPath: buzzwords.yaml
+              readOnly: true
           livenessProbe:
             httpGet:
               path: /
@@ -55,7 +59,7 @@ spec:
       volumes:
       - name: config
         configMap:
-          name: {{ template "br0bot.fullname" . }}           
+          name: {{ template "br0bot.fullname" . }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

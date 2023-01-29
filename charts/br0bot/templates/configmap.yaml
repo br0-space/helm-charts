@@ -8,7 +8,7 @@ metadata:
     release: "{{ .Release.Name }}"
     heritage: "{{ .Release.Service }}"
 data:
-  config.yml: |-
+  config.yaml: |-
     server:
       listenAddr: ":3000"
     database:
@@ -30,6 +30,7 @@ data:
     stonksMatcher:
       quotesUrl: "https://query1.finance.yahoo.com/v7/finance/quote?symbols=%s"
 
+  buzzwords.yaml: |-
     # Buzzword Configuration
     {{- if .Values.bot.buzzwords }}
     {{- toYaml .Values.bot.buzzwords | nindent 4 }}
