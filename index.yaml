@@ -3,6 +3,21 @@ entries:
   br0bot:
   - apiVersion: v2
     appVersion: 2.0.0
+    created: "2023-01-29T08:50:29.030079542Z"
+    dependencies:
+    - condition: postgresql.install
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.1.11
+    description: A Helm chart for Kubernetes
+    digest: deb5fdef96037fca2419fdddbbe4eb3a32d4a669b5ad20d38617c0b226debc7f
+    name: br0bot
+    type: application
+    urls:
+    - https://github.com/br0-space/helm-charts/releases/download/br0bot-0.3.1/br0bot-0.3.1.tgz
+    version: 0.3.1
+  - apiVersion: v2
+    appVersion: 2.0.0
     created: "2023-01-29T08:41:14.280320116Z"
     dependencies:
     - condition: postgresql.install
@@ -478,4 +493,4 @@ entries:
     urls:
     - https://github.com/br0-space/helm-charts/releases/download/restreamer-0.0.1/restreamer-0.0.1.tgz
     version: 0.0.1
-generated: "2023-01-29T08:41:14.280752919Z"
+generated: "2023-01-29T08:50:29.03041244Z"
