@@ -2,11 +2,13 @@ name: Release Charts
 
 on:
   push:
-    branches:
-      - main
-
+    # Pattern matched against refs/tags
+    tags:
+      - '*'           # Push events to every tag not containing /
 jobs:
   release:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -22,7 +24,7 @@ jobs:
       - name: Install Helm
         uses: azure/setup-helm@v4
         with:
-          version: v3.5.3
+          version: v4.2.0
 
       - name: Add Helm repos
         run: |
