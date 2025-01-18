@@ -21,12 +21,14 @@ data:
         password: "{{ .Values.postgresql.postgresqlPassword }}"
         ssl: "disable"
         timezone: "UTC"
+    autoMigrate: false
     telegram:
       apiKey: "{{ .Values.bot.telegram.apiKey }}"
       baseUrl: "https://api.telegram.org/bot%s/"
       webhookUrl: "{{ .Values.bot.telegram.webhookurl }}"
       endpointSetWebhook: "setWebhook"
       endpointSendMessage: "sendMessage"
+      endpointSendPhoto: "sendPhoto"
     stonksMatcher:
       quotesUrl: "https://query1.finance.yahoo.com/v7/finance/quote?symbols=%s"
 
