@@ -1,11 +1,11 @@
 apiVersion: v2
 name: br0bot
-description: A Helm chart for Kubernetes
+description: Br0fessional b0t hosting
 type: application
-version: 0.3.3
-appVersion: "2.0.0"
+version: 0.3.4
+appVersion: "2.0.2"
 dependencies:
   - name: postgresql
     version: 16.4.3
-    repository: https://charts.bitnami.com/bitnami
+    repository: oci://registry-1.docker.io/bitnamicharts/postgresql
     condition: postgresql.install
