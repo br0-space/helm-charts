@@ -1,5 +1,5 @@
 image:
-  name: alpine/helm:3.16.4
+  name: alpine/helm:3.17.0
   entrypoint: ["/bin/sh", "-c"]
 variables:
   HELM_EXPERIMENTAL_OCI: 1
