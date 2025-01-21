@@ -4,12 +4,6 @@
 
 Br0fessional b0t hosting
 
-## Requirements
-
-| Repository | Name | Version |
-|------------|------|---------|
-| oci://registry-1.docker.io/bitnamicharts/postgresql | postgresql | 16.4.3 |
-
 ## Values
 
 | Key | Type | Default | Description |
@@ -52,6 +46,13 @@ Br0fessional b0t hosting
 | bot.buzzwords[9].trigger | string | `"kartoffel"` |  |
 | bot.telegram.apiKey | list | `[]` |  |
 | bot.telegram.webhookurl | string | `"chart-example.local"` |  |
+| db.driver | string | `"sqlite"` |  |
+| db.postgresqlDatabase | string | `""` |  |
+| db.postgresqlHost | string | `""` |  |
+| db.postgresqlPassword | string | `""` |  |
+| db.postgresqlPort | string | `""` |  |
+| db.postgresqlSsl | string | `"disable"` |  |
+| db.postgresqlUsername | string | `""` |  |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"ghcr.io/br0-space/bot"` |  |
@@ -71,19 +72,6 @@ Br0fessional b0t hosting
 | podAnnotations | object | `{}` |  |
 | podLabels | object | `{}` |  |
 | podSecurityContext | object | `{}` |  |
-| postgresql.auth.database | string | `"b0t"` |  |
-| postgresql.auth.existingSecret | string | `""` |  |
-| postgresql.auth.password | string | `"b0t"` |  |
-| postgresql.auth.username | string | `"b0t"` |  |
-| postgresql.install | bool | `false` |  |
-| postgresql.metrics.enabled | bool | `false` |  |
-| postgresql.persistence.accessModes[0] | string | `"ReadWriteOnce"` |  |
-| postgresql.persistence.enabled | bool | `false` |  |
-| postgresql.persistence.size | string | `"8Gi"` |  |
-| postgresql.persistence.storageClass | string | `""` |  |
-| postgresql.postgresqlDatabase | string | `"kmptnz"` |  |
-| postgresql.postgresqlPassword | string | `"kmptnz"` |  |
-| postgresql.postgresqlUsername | string | `"kmptnz"` |  |
 | readinessProbe.httpGet.path | string | `"/"` |  |
 | readinessProbe.httpGet.port | string | `"http"` |  |
 | replicaCount | int | `1` |  |

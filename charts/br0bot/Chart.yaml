@@ -2,10 +2,5 @@ apiVersion: v2
 name: br0bot
 description: Br0fessional b0t hosting
 type: application
-version: 0.3.4
+version: 0.3.5
 appVersion: "2.0.2"
-dependencies:
-  - name: postgresql
-    version: 16.4.3
-    repository: oci://registry-1.docker.io/bitnamicharts
-    condition: postgresql.install

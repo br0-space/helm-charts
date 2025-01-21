@@ -12,13 +12,13 @@ data:
     server:
       listenAddr: ":3000"
     database:
-      driver: "postgres"
+      driver: "{{ .Values.db.driver }}"
       postgres:
-        host: "{{ include "br0bot.postgresql.fullname" . }}"
-        port: 5432
-        dbName: "{{ .Values.postgresql.postgresqlDatabase }}"
-        user: "{{ .Values.postgresql.postgresqlUsername }}"
-        password: "{{ .Values.postgresql.postgresqlPassword }}"
+        host: "{{ .Values.db.postgresqlHost }}"
+        port: "{{ .Values.db.postgresqlPort }}"
+        dbName: "{{ .Values.db.postgresqlDatabase }}"
+        user: "{{ .Values.db.postgresqlUsername }}"
+        password: "{{ .Values.db.postgresqlPassword }}"
         ssl: "disable"
         timezone: "UTC"
     autoMigrate: false
