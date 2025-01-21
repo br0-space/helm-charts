@@ -6,6 +6,6 @@ version: 0.3.4
 appVersion: "2.0.2"
 dependencies:
   - name: postgresql
-    version: 16.4.3
+    version: 16.4.5
     repository: oci://registry-1.docker.io/bitnamicharts
     condition: postgresql.install
