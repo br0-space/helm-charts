@@ -3,6 +3,16 @@ entries:
   br0bot:
   - apiVersion: v2
     appVersion: 2.0.2
+    created: "2025-01-21T15:29:31.899799757Z"
+    description: Br0fessional b0t hosting
+    digest: 4f13ca9008af6efc6d2e4ebeefe75a14fe925582901d37960349f3838004286a
+    name: br0bot
+    type: application
+    urls:
+    - https://github.com/br0-space/helm-charts/releases/download/br0bot-0.3.5/br0bot-0.3.5.tgz
+    version: 0.3.5
+  - apiVersion: v2
+    appVersion: 2.0.2
     created: "2025-01-18T19:40:09.322378212Z"
     dependencies:
     - condition: postgresql.install
@@ -538,4 +548,4 @@ entries:
     urls:
     - https://github.com/br0-space/helm-charts/releases/download/restreamer-0.0.1/restreamer-0.0.1.tgz
     version: 0.0.1
-generated: "2025-01-18T19:40:09.32256566Z"
+generated: "2025-01-21T15:29:31.900117475Z"
